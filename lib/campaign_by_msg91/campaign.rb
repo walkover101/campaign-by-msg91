@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require 'httparty'
 require 'json'
 
 module CampaignByMsg91
+  # Campaign Class
   class Campaign
     CAMPAIGNS_BASE_URL = 'https://control.msg91.com/api/v5/campaign/api/campaigns'
 
@@ -11,14 +14,14 @@ module CampaignByMsg91
 
     def authkey_present?
       if @authkey.empty?
-        "Authkey Not Found"
+        'Authkey Not Found'
       else
-        "Authkey Found"
+        'Authkey Found'
       end
     end
 
     def index
-      uri = "/"
+      uri = '/'
       headers = {
         authkey: @authkey
       }
