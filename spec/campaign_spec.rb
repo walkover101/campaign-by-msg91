@@ -14,10 +14,6 @@ describe CampaignByMsg91::Campaign do
       end
     end
 
-    it 'authkey exists' do
-      expect(CampaignByMsg91::Campaign.new.authkey_present?).to eql('Authkey Found')
-    end
-
     it 'list campaigns' do
       CampaignByMsg91::Campaign.new.index
     end
