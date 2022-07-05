@@ -8,8 +8,12 @@ require 'campaign_by_msg91/campaign'
 module CampaignByMsg91
   class Error < StandardError; end
 
+  class << self
+    attr_accessor :configuration
+  end
+
   def self.configuration
-    @config ||= Configuration.new
+    @configuration ||= Configuration.new
   end
 
   def self.configure
