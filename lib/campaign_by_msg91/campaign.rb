@@ -10,14 +10,7 @@ module CampaignByMsg91
 
     def initialize
       @authkey = CampaignByMsg91.configuration.auth_key
-    end
-
-    def authkey_present?
-      if !@authkey || @authkey.empty?
-        'Authkey Not Found :('
-      else
-        'Authkey Found'
-      end
+      raise 'Set authkey in config/initializers/campaign_by_msg91.rb' if (!@authkey || @authkey.empty?)
     end
 
     def index
