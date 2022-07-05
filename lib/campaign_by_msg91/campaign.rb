@@ -8,12 +8,12 @@ module CampaignByMsg91
   class Campaign
     CAMPAIGNS_BASE_URL = 'https://control.msg91.com/api/v5/campaign/api/campaigns'
 
-    def initialize(authkey)
-      @authkey = authkey
+    def initialize
+      @authkey = CampaignByMsg91.configuration.auth_key
     end
 
     def authkey_present?
-      if @authkey.empty?
+      if !@authkey || @authkey.empty?
         'Authkey Not Found'
       else
         'Authkey Found'
