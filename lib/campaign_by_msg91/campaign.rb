@@ -14,7 +14,7 @@ module CampaignByMsg91
 
     def authkey_present?
       if !@authkey || @authkey.empty?
-        'Authkey Not Found'
+        'Authkey Not Found :('
       else
         'Authkey Found'
       end

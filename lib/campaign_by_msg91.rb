@@ -7,7 +7,6 @@ require 'campaign_by_msg91/campaign'
 # CampaignByMsg91
 module CampaignByMsg91
   class Error < StandardError; end
-  p 'new version'
 
   class << self
     attr_accessor :configuration
