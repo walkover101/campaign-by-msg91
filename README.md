@@ -22,7 +22,36 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installation run
+
+    $ rails g campaign_by_msg91:install
+
+In your `config/initalizers/campaign_by_msg91.rb`, initialize your `auth_key`. This can be
+obtained from [msg91.com](msg91.com)
+
+### List Campaigns
+
+To fetch list of campaigns
+
+```ruby
+campaigns = CampaignByMsg91::Campaign.new.index
+```
+
+### List Campaign Fields
+
+To fetch list of campaign fields
+
+```ruby
+campaign_fields = CampaignByMsg91::Campaign.new.index_fields(campaign_slug)
+```
+
+### Show Campaign Request Body
+
+To show campaign request body
+
+```ruby
+request_body = CampaignByMsg91::Campaign.new.show_request_body(campaign_slug)
+```
 
 ## Development
 
