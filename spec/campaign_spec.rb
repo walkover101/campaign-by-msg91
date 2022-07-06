@@ -7,6 +7,7 @@ Dotenv.load('.env')
 describe CampaignByMsg91::Campaign do
   describe '#configure' do
     let(:slug) { ENV['CAMPAIGN_TEST_SLUG'] }
+    let(:request_body) { File.read('./spec/request_body.json') }
 
     before(:each) do
       CampaignByMsg91.configure do |config|
@@ -24,6 +25,10 @@ describe CampaignByMsg91::Campaign do
 
     it 'show campaign request body' do
       CampaignByMsg91::Campaign.new.show_request_body(slug)
+    end
+
+    it 'run campaign' do
+      p CampaignByMsg91::Campaign.new.run_campaign(slug, request_body)
     end
   end
 end

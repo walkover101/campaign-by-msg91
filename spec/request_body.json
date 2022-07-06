@@ -1,0 +1,56 @@
+{
+  "data": {
+    "sendTo": [
+      {
+        "to": [
+          {
+            "name": "name",
+            "email": "name@email.com",
+            "mobiles": "911234567890"
+          }
+        ],
+        "cc": [
+          {
+            "name": "name",
+            "email": "name@email.com",
+            "mobiles": "911234567890"
+          }
+        ],
+        "bcc": [
+          {
+            "name": "name",
+            "email": "name@email.com",
+            "mobiles": "911234567890"
+          }
+        ],
+        "variables": {
+          "ORG_LOGO_LINK": {
+            "type": "{your_type}",
+            "value": "{your_value}"
+          },
+          "ORG_NAME": {
+            "type": "{your_type}",
+            "value": "{your_value}"
+          },
+          "MENU1_LINK": {
+            "type": "{your_type}",
+            "value": "{your_value}"
+          }
+        }
+      }
+    ],
+    "attachments": [
+      {
+        "fileType": "url or base64",
+        "fileName": "{your_fileName}",
+        "file": "{your_file}"
+      }
+    ],
+    "reply_to": [
+      {
+        "name": "{your_name}",
+        "email": "{your_email}"
+      }
+    ]
+  }
+}
