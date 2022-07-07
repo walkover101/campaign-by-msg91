@@ -41,9 +41,10 @@ module CampaignByMsg91
     end
 
     def run_campaign(campaign_slug, request_body)
-      uri = "/#{campaign_slug}/run"
+      uri = "/#{campaign_slug}/run?pluginsource=600"
       headers = {
-        authkey: @authkey
+        authkey: @authkey,
+        'Content-Type': 'application/json'
       }
 
       HTTParty.post("#{CAMPAIGNS_BASE_URL}#{uri}", body: request_body, headers: headers).parsed_response

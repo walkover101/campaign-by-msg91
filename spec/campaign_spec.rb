@@ -28,7 +28,7 @@ describe CampaignByMsg91::Campaign do
     end
 
     it 'run campaign' do
-      p CampaignByMsg91::Campaign.new.run_campaign(slug, request_body)
+      CampaignByMsg91::Campaign.new.run_campaign(slug, request_body)
     end
   end
 end
