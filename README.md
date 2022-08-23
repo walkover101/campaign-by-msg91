@@ -58,7 +58,8 @@ request_body = CampaignByMsg91::Campaign.new.show_request_body(campaign_slug)
 To run a campaign
 
 ```ruby
-response = CampaignByMsg91::Campaign.new.run_campaign(campaign_slug, request_body)
+request_body = { data: { sendTo: [] ... } }
+response = CampaignByMsg91::Campaign.new.run_campaign(campaign_slug, request_body.to_json)
 ```
 
 ## Development
